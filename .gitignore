@@ -5,4 +5,4 @@ target
 .settings/
 build
 Servers
-.recommenders
+.recommenders/
