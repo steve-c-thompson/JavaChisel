@@ -1,0 +1,16 @@
+package com.sthompson.chisel.parsing;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TextChunkParser implements ChiselParser {
+
+	@Override
+	public List<String> parseLines(List<String> input) {
+		List<String> lines = new ArrayList<>();
+		
+		
+		return lines;
+	}
+
+}
