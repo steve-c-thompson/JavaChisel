@@ -1,3 +1,8 @@
 .DS_Store
 bin
 target
+.metadata/
+.settings/
+build
+Servers
+.recommenders
