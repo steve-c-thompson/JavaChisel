@@ -1,7 +1,0 @@
-package com.sthompson.chisel.io;
-
-import java.util.List;
-
-public interface MarkdownDataSource {
-	List<String> readData();
-}

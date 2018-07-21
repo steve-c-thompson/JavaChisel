@@ -1,5 +1,0 @@
-package com.sthompson.chisel.parsing;
-
-public interface ChiselParser {
-
-}
