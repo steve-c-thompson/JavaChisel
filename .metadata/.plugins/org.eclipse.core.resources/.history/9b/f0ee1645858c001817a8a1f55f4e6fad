@@ -1,0 +1,17 @@
+package com.sthompson.chisel.io;
+
+import java.io.InputStream;
+
+public class FileMarkdownDataSource extends FileMarkdownDataSourceImpl {
+
+	public FileMarkdownDataSource(InputStream inputStream) {
+		super(inputStream);
+	}
+
+	@Override
+	public void initialize() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

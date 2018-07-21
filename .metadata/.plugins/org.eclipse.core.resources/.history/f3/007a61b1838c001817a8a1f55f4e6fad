@@ -1,0 +1,5 @@
+package com.sthompson.chisel.io;
+
+public interface MarkdownDataSource {
+
+}

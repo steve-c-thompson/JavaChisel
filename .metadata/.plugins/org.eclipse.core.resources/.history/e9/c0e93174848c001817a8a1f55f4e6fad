@@ -1,0 +1,9 @@
+package com.sthompson.chisel.io;
+
+import java.io.InputStream;
+import java.util.List;
+
+public interface MarkdownDataSource {
+	void initialize(InputStream input);
+	List<String> readData();
+}

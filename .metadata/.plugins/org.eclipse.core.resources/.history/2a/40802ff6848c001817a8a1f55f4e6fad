@@ -1,0 +1,11 @@
+package com.sthompson.chisel.io;
+
+public class FileMarkdownDataSource extends FileMarkdownDataSourceImpl {
+
+	@Override
+	public void initialize() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
