@@ -60,7 +60,7 @@ public class TextChunkParser implements ChiselParser {
 				newChunk = false;
 			}
 			else {
-				if(lineBuff.length() > 0) {
+				if(!lineBuff.length() > 0) {
 					chunks.add(lineBuff.toString());
 					// reset
 					lineBuff.delete(0, lineBuff.length());

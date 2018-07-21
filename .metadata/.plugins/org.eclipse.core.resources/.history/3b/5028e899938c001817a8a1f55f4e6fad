@@ -128,54 +128,5 @@ public class TextChunkParserTests {
 		
 		assertEquals("<h5>Header</h5>", output.get(0));
 	}
-	
-	@Test
-	public void test_multiple_h2_line_becomes_html() {
-		List<String> lines = new ArrayList<>();
-		
-		lines.add("## Header 1");
-		lines.add("## Header 2");
-		
-		List<String> output = p.parseLines(lines);
-		assertNotNull(output);
-		assertEquals(2, output.size());
-		
-		assertEquals("<h2>Header 1</h2>", output.get(0));
-		assertEquals("<h2>Header 2</h2>", output.get(1));
-	}
-	
-	@Test
-	public void test_h_followed_by_text_lines_becomes_header_with_paragraph() {
-		List<String> lines = new ArrayList<>();
-		
-		lines.add("## Header 1");
-		lines.add("This is text 1.");
-		lines.add("This is text 2.");
-		
-		List<String> output = p.parseLines(lines);
-		assertNotNull(output);
-		assertEquals(2, output.size());
-		
-		assertEquals("<h2>Header 1</h2>", output.get(0));
-		assertEquals("<p>This is text 1. This is text 2.</p>", output.get(1));
-	}
-	
-	@Test
-	public void test_h_followed_by_spaces_with_text_line_becomes_header_with_paragraph() {
-		List<String> lines = new ArrayList<>();
-		
-		lines.add("## Header 1");
-		lines.add("");
-		lines.add("   ");
-		lines.add("This is text 1.");
-		lines.add("This is text 2.");
-		
-		List<String> output = p.parseLines(lines);
-		assertNotNull(output);
-		assertEquals(2, output.size());
-		
-		assertEquals("<h2>Header 1</h2>", output.get(0));
-		assertEquals("<p>This is text 1. This is text 2.</p>", output.get(1));
-	}
 
 }

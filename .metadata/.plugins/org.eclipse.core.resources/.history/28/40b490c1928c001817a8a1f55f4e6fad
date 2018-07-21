@@ -13,8 +13,7 @@ public class TextChunkParser implements ChiselParser {
 		
 		List<String> chunks = groupLinesInChunks(input);
 		
-		// Look for # with space, and capture it and all words afterward as two groups
-		Pattern pattern = Pattern.compile("([#]+)\\s(.*)");
+		Pattern pattern = Pattern.compile("([#]+)");
 		Matcher matcher = pattern.matcher("");
 		for(String line : chunks) {
 			matcher.reset(line);
@@ -23,8 +22,6 @@ public class TextChunkParser implements ChiselParser {
 				String h = matcher.group(1);
 				tag = "h";
 				tag += h.length();
-				// TODO: this should not count past 6
-				line = matcher.group(2);
 			}
 			else {
 				tag = "p";
@@ -60,11 +57,9 @@ public class TextChunkParser implements ChiselParser {
 				newChunk = false;
 			}
 			else {
-				if(lineBuff.length() > 0) {
-					chunks.add(lineBuff.toString());
-					// reset
-					lineBuff.delete(0, lineBuff.length());
-				}
+				chunks.add(lineBuff.toString());
+				// reset
+				lineBuff.delete(0, lineBuff.length());
 				newChunk = true;
 			}
 		}
