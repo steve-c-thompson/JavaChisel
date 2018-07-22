@@ -1,11 +1,19 @@
 package com.sthompson.chisel.parsing;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TextChunkParser implements ChiselParser {
+	
+	private Map<String, String> regexMatchRulesAndCaptures;
+	
+	{
+		regexMatchRulesAndCaptures = new LinkedHashMap<>();
+	}
 
 	@Override
 	public List<String> parseLines(List<String> input) {

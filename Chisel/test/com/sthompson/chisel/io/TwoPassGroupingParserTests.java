@@ -10,15 +10,15 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sthompson.chisel.parsing.InlineParser;
+import com.sthompson.chisel.parsing.TwoPassGroupingParser;
 
-public class InlineParserTests {
+public class TwoPassGroupingParserTests {
 	
-	private InlineParser p;
+	private TwoPassGroupingParser p;
 
 	@Before
 	public void setUp() throws Exception {
-		p = new InlineParser();
+		p = new TwoPassGroupingParser();
 	}
 
 	@After
