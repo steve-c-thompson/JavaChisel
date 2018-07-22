@@ -2,6 +2,15 @@
 
 This is a Java implementation of the project below, from Turing School of Software and Design.
 
+> "Can I create a regular expression to flush and fill my radiator? Yes."
+>
+> _Rob Roselius_
+
+I ended up doing a lot of regex playing and testing at https://regex101.com/.
+
+This solution makes two passes: one to group the text into sections for paragraphs, bullets, and headers; and one to parse the text in those groups. I don't like this. I need to do this with one pass. Unit tests are in place, though, so I could refactor.
+
+---
 
 ## Before You Begin
 
