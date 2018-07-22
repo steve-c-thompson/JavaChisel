@@ -1,0 +1,19 @@
+## Here is some **markdown**
+ 
+My *favorite* cuisines are:
+
+* Sushi
+* Barbeque
+* Mexican
+
+
+This is a markdown test.
+Here is part of the same paragraph.
+
+And this is *yet another* paragraph.
+
+If I had to list these they would be
+
+1. Sushi
+2. Mexican
+9. Yep
