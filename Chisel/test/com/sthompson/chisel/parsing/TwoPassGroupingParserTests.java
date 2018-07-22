@@ -9,7 +9,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class InlineParserTests {
+public class TwoPassGroupingParserTests {
 
 	private TwoPassGroupingParser p;
 	
@@ -118,6 +118,29 @@ public class InlineParserTests {
 		assertEquals(1, output.size());
 		assertEquals("<p>This is <strong>styled and whatever <em>empha emph</em>  and styled</strong> text</p>", output.get(0));
 	}
+	
+//	@Test
+	// Can't handle this case. Probably need some kind of callback replacement to parse inside
+	// a <strong>
+//	public void test_starstar_around_str_text_surrounds_with_strong_em() {
+//		List<String> lines = new ArrayList<>();
+//		lines.add("This is ***styled styled*** text");
+//		
+//		List<String> output = p.parseLines(lines);
+//		assertNotNull(output);
+//		
+//		assertEquals(1, output.size());
+//		assertEquals("<p>This is <strong><em>styled styled</em></strong> text</p>", output.get(0));
+//		
+//		lines.clear();
+//		lines.add("***styled styled***");
+//		
+//		output = p.parseLines(lines);
+//		assertNotNull(output);
+//		
+//		assertEquals(1, output.size());
+//		assertEquals("<p><strong><em>styled styled</em></strong></p>", output.get(0));
+//	}
 	
 	@Test
 	public void test_hX_line_becomes_html() {
